@@ -7,16 +7,17 @@
  */
 int print_string(char *str)
 {
-if (!str)
-str = "(null)";
+	int count = 0;
 
-int count = 0;
-while (*str)
-{
-_putchar(*str);
-count++;
-str++;
-}
+	if (!str)
+	str = "(null)";
 
-return count;
+	while (*str)
+	{
+	_putchar(*str);
+	count++;
+	str++;
+	}
+
+	return (count);
 }
