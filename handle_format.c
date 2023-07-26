@@ -25,11 +25,25 @@ int handle_format(const char *format, va_list args)
 	case 'i':
 		count += print_integer(va_arg(args, int));
 		break;
+	case 'b':
+		count += print_binary(va_arg(args, unsigned int));
+		break;
+	case 'u':
+		count += print_unsigned(va_arg(args, unsigned int));
+		break;
+	case 'o':
+		count += print_octal(va_arg(args, unsigned int));
+		break;
+	case 'x':
+		count += print_hex(va_arg(args, unsigned int), 0);
+		break;
+	case 'X':
+		count += print_hex(va_arg(args, unsigned int), 1);
+		break;
 	default:
 		_putchar('%');
 		_putchar(*format);
 		count += 2;
 	}
-
 	return (count);
 }

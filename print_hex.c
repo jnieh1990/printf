@@ -13,10 +13,11 @@ int print_hex(unsigned int num, int uppercase)
 	if (num == 0)
 	{
 		_putchar('0');
-		return 1;
+		return (1);
 	}
 
 	char hex_digits[] = "0123456789abcdef";
+
 	if (uppercase)
 		hex_digits = "0123456789ABCDEF";
 
@@ -36,5 +37,5 @@ int print_hex(unsigned int num, int uppercase)
 		count++;
 	}
 
-	return count;
+	return (count);
 }
