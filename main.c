@@ -26,5 +26,9 @@
 	printf("Length:[%d, %i]\n", len2, len2);
 	_printf("Negative:[%d]\n", -762534);
 	printf("Negative:[%d]\n", -762534);
+	_printf(NULL);
+	printf(NULL);
+	_printf("%");
+	printf("%");
 	return (0);
 }
