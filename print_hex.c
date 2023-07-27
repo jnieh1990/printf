@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <string.h>
 /**
  * print_hex - Print an unsigned integer in hexadecimal representation.
  * @num: The unsigned integer to print.
@@ -8,7 +8,8 @@
  */
 int print_hex(unsigned int num, int uppercase)
 {
-	int count = 0;
+	char hex_representation[100], hex_digits[17];
+	int i, index, count = 0;
 
 	if (num == 0)
 	{
@@ -16,13 +17,10 @@ int print_hex(unsigned int num, int uppercase)
 		return (1);
 	}
 
-	char hex_digits[] = "0123456789abcdef";
-
-	if (uppercase)
-		hex_digits = "0123456789ABCDEF";
-
-	char hex_representation[100];
-	int index = 0;
+	strcpy(hex_digits, 
+			uppercase ?
+		       	"0123456789ABCDEF" : "0123456789abcdef");
+	index = 0;
 
 	while (num != 0)
 	{
@@ -31,7 +29,7 @@ int print_hex(unsigned int num, int uppercase)
 		index++;
 	}
 
-	for (int i = index - 1; i >= 0; i--)
+	for (i = index - 1; i >= 0; i--)
 	{
 		_putchar(hex_representation[i]);
 		count++;

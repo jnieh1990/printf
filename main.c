@@ -31,5 +31,6 @@ int main(void)
 	printf(NULL);
 	_printf("%");
 	printf("%");
+	_printf("%b\n", 98);
 	return (0);
 }

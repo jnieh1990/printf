@@ -28,11 +28,11 @@ int print_unsigned(unsigned int num)
 	{
 		divisor = 1;
 		for (j = 1; j < digits - i; j++)
+		{
 			divisor *= 10;
-
+		}
 		_putchar((num / divisor) % 10 + '0');
 		count++;
 	}
-
 	return (count);
 }
