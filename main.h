@@ -12,7 +12,7 @@ int print_char(char c);
 int print_string(char *str);
 int print_percent(void);
 int print_integer(int num);
-int print_unsigned(unsigned int num);
+int print_unsigned(void *num);
 int print_octal(unsigned int num);
 int print_hex(unsigned int num, int uppercase);
 int print_binary(unsigned int num);

@@ -29,7 +29,7 @@ int handle_format(const char *format, va_list args)
 		count += print_binary(va_arg(args, unsigned int));
 		break;
 	case 'u':
-		count += print_unsigned(va_arg(args, unsigned int));
+		count += print_unsigned((void *)va_arg(args, unsigned int *));
 		break;
 	case 'o':
 		count += print_octal(va_arg(args, unsigned int));
